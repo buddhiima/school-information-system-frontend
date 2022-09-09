@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI';
-}
+} 
 
 .navbar {
     color: var(--grey);
@@ -17,21 +17,18 @@ body {
     font-weight: bold;
 }
 
-.navbar ul {
-    list-style-type: none;
-}  
-
 .navbar ul li {
     display: inline;
-    padding-left: 8em;
-    margin-top: 1em;
+    padding-left: 50em;
+    margin-top: .5em;
 }
 
 .navbar ul li img {
     height: 6em;
     width: 6em;
+    margin-top: 1em;
     align-items: center;
-    margin-left: -12em;
+    margin-left: -49em;
 }
 
 #logout-btn {
@@ -45,69 +42,60 @@ body {
     border: 0px;
     font-weight: bold;
     margin-right: 1em;
+    margin-left: 15em;
+    font-size: .7em;
 }
 
-#changepsw-btn {
-    border-radius: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    color: #707070;
-    border: .1em solid #707070;
-    background-color: var(--white);
-    font-size: .6em;
-    margin-left: 2em;
-}
-
-.grade {
-    margin-top: 9em;
-    border: 0px;
+.main-heading {
+    font-weight: bold;
     color: var(--grey);
-    font-weight: 400;
-    font-size: 1em;
-}
-
-.grade-label {
-    margin-top: 5em;
-}
-
-.grade-dropdown {
-    width: 7em;
-    align-self: center;
-}
-
-.big-text {
     font-size: 1.3em;
+    margin-bottom: 2em;
 }
 
-.small-text {
+.table-header {
+    list-style: none;
+    font-weight: bold;
+    color: var(--grey);
     font-size: 1em;
 }
 
-.list {
-    display: grid;
-    gap: .1rem;
-    max-width: 2em auto;
-}
-
-@media  screen and (min-width: 768px) {
-    .list {
-        grid-template-columns: repeat(3, 2fr);
-    }
-}
-
-.horizontal-rule {
-    margin-top: 5em;
-    margin-bottom: 2em;
+.home-body {
     margin-left: 12em;
     margin-right: 12em;
 }
 
-.green-btn {
-    color: var(--white);
-    background-color: var(--green);
+.home-body .btn {
+    color: white;
+    border: 1px solid white;
+    border-radius: 15em;
+    font-size: .8em;
+    font-weight: bold;
 }
+
+.home-body table {
+    color: var(--grey);
+    margin-left: 2em;
+}
+
+.home-body table th{
+    font-weight: bold;
+}
+
+table {
+    width: fit-content;
+}
+
+th {
+    padding: 3em;
+}
+
+td {
+    border: 1px solid var(--grey);
+    padding-left: 3em;
+    padding-bottom: 1em;
+}
+
 
 
 
