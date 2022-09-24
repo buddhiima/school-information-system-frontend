@@ -1,6 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from "./UpdateModal";
+
+
 
 import '../common.css'
 
@@ -20,6 +23,7 @@ export default function Grade() {
     }, [])
 
     // html render
+   const [openModal, setOpenModal] = useState(false)
     return(
         <div className="home-body">
             <center>
@@ -27,7 +31,9 @@ export default function Grade() {
 
                 <hr/>
 
-                <button className="btn" style={{backgroundColor:"#00C5AB"}}>NEW</button>
+                <button className="btn" style={{backgroundColor:"#00C5AB"} } >NEW</button>
+                
+               
 
                 <table>
                     <tr>
@@ -47,12 +53,13 @@ export default function Grade() {
                                 <td>{student.grade}</td>
                                 <td>{student.address}</td>
                                 <td>{student.contact}</td>
-                                <td> <button className="btn" style={{backgroundColor:"#FEC045"}}>UPDATE</button></td>
+                                <td> <button className="btn" style={{backgroundColor:"#FEC045"}} onClick={() => {setOpenModal(true)}}>UPDATE</button></td>
                                 <td> <button className="btn" style={{backgroundColor:"#FF7170"}}>REMOVE</button></td>
                             </tr>
                         )
                     })}
                 </table>
+                {openModal && <Modal closeModal={setOpenModal}/> }
             </center>
         </div>
     )
